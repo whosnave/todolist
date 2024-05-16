@@ -1,0 +1,111 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+table {
+    width: 95%;
+    border-collapse: collapse;
+}
+table td {
+    padding: 5px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffffe5;
+    box-shadow: 10px 10px gray;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+button.add {
+    background-color: gray;
+    border-color: rgba(0, 0, 0, 0.575);
+    height: 40px;
+    width: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+button.add:hover {
+    background-color: rgb(91, 219, 91);
+    transition: ease-in-out 0.2s;
+}
+.nav {
+    background-color: rgb(153, 151, 151);
+    margin-top: -41px;
+}
+.navtext {
+    padding: 30px;
+    margin-left: 90px;
+}
+.inputadd {
+    border: 0;
+    size: 20px;
+    background-color: lightgray;
+    height: 37px;
+}
+input.checkbox {
+    height: 20px;
+    width: 20px;
+    margin-top: 15px;
+}
+.profile {
+    background-color: darkgray;
+    width: 20px;
+    height: 20px;
+}
+.profile img {
+    height: 70px;
+    width: 70px;
+    margin-top: 53px;
+    margin-left: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: ease-out 0.2s;
+}
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+/* Media query for phones */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+        border: none;
+    }
+    .nav {
+        margin-top: 0;
+        text-align: center;
+    }
+    .profile img {
+        height: 50px;
+        width: 50px;
+        margin-top: 5px;
+        margin-left: 278px;
+    }
+    .navtext {
+        padding: 20px;
+        margin-left: 0;
+        font-size: 25px;
+    }
+    .form {
+        padding: 0 10px;
+    }
+    table {
+        width: 100%;
+    }
+    .inputadd {
+        width: 70%;
+    }
+    button.add {
+        width: 25%;
+    }
+}
+

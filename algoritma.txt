@@ -1,0 +1,20 @@
+ALGORITMA TO DO LIST
+
+1. Membuka to do list app (login/register (optional))
+2. Menambahkan to do list (Input)
+3. Menghapus to do list (Delete)
+4. Mengubah to do list (Update)
+5. Menampilkan to do list (Output)
+6. Menampilkan to do list yang sudah selesai
+7. Menampilkan to do list yang belum selesai
+7. Menampilkan to do list yang sudah dihapus
+7. Menampilkan to do list yang sudah diubah statusnya
+10. Jika user tidak mengerjakan to do list dalam kurun waktu yang sudah ditentukan maka diberikan alert dan mengurangi poin yang sudah dikumpulkan (Optional ketika login)
+11. Jika user mengerjakan to do list maka diberikan poin tambahan (Optional tergantung login)
+12. Jika to do list nya mendekati waktu yang ditentukan oleh user maka akan diberika notifikasi (Reminder)
+13. 
+
+Note: 
+1. Catatan no 11. Harus set nilai value poin di awal dalam aplikasi dan leveling.
+2. Fungsi reward adalah untuk naik level.
+3. Tambahan untuk fitur ubah background (Customisasi).
