@@ -175,7 +175,6 @@ hr {
     background-color: rgb(91, 151, 219);
 }
 
-/* Media query for phones */
 @media only screen and (max-width: 600px) {
     .nav .profile img {
         margin-left: 0 !important;
