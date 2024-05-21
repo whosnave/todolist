@@ -1,191 +1,93 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: lightgray;
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, gray, darkgray);
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.nav .profile {
-    margin-right: 20px;
-}
-
-.nav .profile img {
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin-left: 405px;
-}
-
-.nav .profile img:hover {
-    transform: scale(1.1);
-}
-
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, gray, darkgray);
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.user-info span {
-    color: white;
-    margin-bottom: 5px;
-}
-
-.profile img {
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.profile img:hover {
-    transform: scale(1.1);
-}
-
-.signin-signup {
-    display: flex;
-}
-
-.signin-signup a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s;
-}
-
-.signin-signup a:hover {
-    text-decoration: underline;
-    color: lightgray;
-}
-
-
-.navtext {
-    color: white;
-    font-size: 24px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-button.add {
-    background-color: gray;
-    border: 1px solid rgba(0, 0, 0, 0.575);
-    height: 40px;
-    width: 50px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    border-color: transparent;
-    margin-left: 8px;
-    box-shadow: 0px 1px 6px;
-}
-
-
-button.add:hover {
-    background-color: rgb(91, 219, 91);
-}
-
-.inputadd {
-    border: 0;
-    background-color: lightgray;
-    height: 37px;
-    padding: 5px 15px;
-    font-size: 16px;
-    box-shadow: 0px 1px 6px;
-    transition: ease-out 0.3s;
-    margin-bottom: 10px;
-}
-
-.inputadd:hover {
-    box-shadow: 0px 1px 9px;
-}
-
-hr {
-    height: 2px; 
-    border: none; 
-    background-color: gray; 
-}
-
-.list1 {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-}
-
-.text1 {
-    flex-grow: 1; 
-}
-
-.checkbox-container {
-    display: flex; 
-    align-items: center; 
-}
-
-.toolscheckbox1 {
-    margin-left: 5px; 
-}
-
-.edit1, .delete1 {
-    background-color: gray;
-    border: 1px solid rgba(0, 0, 0, 0.575);
-    height: 30px;
-    width: 70px; 
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    border-color: transparent;
-    margin-left: 8px;
-    box-shadow: 0px 1px 6px;
-}
-
-.delete1:hover {
-    background-color: rgb(219, 91, 91);
-}
-.edit1:hover {
-    background-color: rgb(91, 151, 219);
-}
-
-@media only screen and (max-width: 600px) {
-    .nav .profile img {
-        margin-left: 0 !important;
-    }
-
-    .signin-signup {
-        margin-top: 10px !important; 
-        justify-content: flex-end !important; 
-    }
-
-    .nav .navtext {
-        margin: 0 auto !important; 
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evan's To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="user-info">
+        <span class="level">Level 1</span>
+        <span class="points">Points: 0</span>
+      </div>
+      <div class="profile">
+        <img src="images.jpeg" alt="Profile Picture" />
+      </div>
+      <h1 style="margin-right: 370px" class="navtext">Evan's To-Do List</h1>
+      <div class="signin-signup">
+        <a href="#" class="sign-in">Sign In</a>
+        <a href="#" class="sign-up">Sign Up</a>
+      </div>
+    </div>
+    <div class="form">
+      <div class="container">
+        <h1>To-Do List</h1>
+        <table>
+          <tr>
+            <td>
+              <div class="Add">
+                <input
+                  id="inputAdd"
+                  placeholder="Type Here..."
+                  class="inputadd"
+                  type="text"
+                />
+                <input
+                  
+                  class="inputadd"
+                  style="width: 80px; height: 35px; margin-left: 8px"
+                  type="time"
+                  name=""
+                  id="inputTime"
+                />
+                <input
+                  class="inputadd"
+                  style="margin-left: 8px; width: 20px; height: 35px"
+                  type="date"
+                  name=""
+                  id="inputDate"
+                />
+                <button id="addBtn" class="add" onkeydown="onKey()">Add</button>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <hr />
+        <center>
+          <div class="lists">
+            <h2>Your To-Do List</h2>
+          </div>
+        </center>
+        <hr />
+        <ul class="ulList">
+          <!-- <li> -->
+            <!-- <div class="content">
+              <div class="list1">
+                <div class="text1">
+                  <h3 id="titleList">Your To Do List Name</h3>
+                  <p id="decList">Informations (Date, description, etc)</p>
+                </div>
+                <div class="checkbox-container">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    style="width: 30px; height: 30px"
+                  />
+                  <div class="toolscheckbox1">
+                    <input class="edit1" type="button" value="Edit" />
+                    <input class="delete1" type="button" value="Delete" />
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          <!-- </li> -->
+        </ul>
+        <hr />
+      </div>
+    </div>  
+    <script src="script.js"></script>
+  </body>
+</html>
