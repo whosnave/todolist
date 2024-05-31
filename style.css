@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -27,13 +28,12 @@ body {
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s;
-    margin-left: 405px;
+    margin-left: 450px;
 }
 
 .nav .profile img:hover {
     transform: scale(1.1);
 }
-
 
 .nav {
     display: flex;
@@ -66,22 +66,44 @@ body {
     transform: scale(1.1);
 }
 
-.signin-signup {
-    display: flex;
+.signOut {
+    position: fixed;
+    top: 45px;
+    right: 20px;
 }
 
-.signin-signup a {
-    color: white;
+.signOut a {
     text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s;
+    color: white;   
 }
 
-.signin-signup a:hover {
-    text-decoration: underline;
-    color: lightgray;
+a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+  
+a:hover {
+    color: gray;
 }
 
+a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: gray;
+    transform: scaleX(0);
+    transition:  0.3s ease;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+}
 
 .navtext {
     color: white;
@@ -109,7 +131,6 @@ button.add {
     margin-left: 7px;
     box-shadow: 0px 1px 6px;
 }
-
 
 button.add:hover {
     background-color: rgb(91, 219, 91);
@@ -171,22 +192,67 @@ hr {
 .delete1:hover {
     background-color: rgb(219, 91, 91);
 }
+
 .edit1:hover {
     background-color: rgb(91, 151, 219);
 }
 
+/* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .nav .profile img {
-        margin-left: 51px !important;
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 
-    .signin-signup {
-        margin-top: 1px !important; 
-        justify-content: flex-end !important; 
+    .user-info {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
     }
 
-    .nav .navtext {
-        margin: 0 auto !important;
-        margin-left: -1px !important; 
+    .user-info span {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .navtext {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .container {
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+    .Add, .inputadd, .toolscheckbox1 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .toolscheckbox1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edit1, .delete1 {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .list1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text1 h3, .text1 p {
+        margin: 5px 0;
     }
 }
