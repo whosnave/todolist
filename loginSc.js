@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       if (username === storedUsername && password === storedPassword) {
         alert("Login successful!");
+        alert(`Welcome ${username.toUpperCase()}!`)
         window.location.href = "homepage.html"; 
       } else {
         const signUp = confirm("Login failed. Click OK if you want to create a new account.");
