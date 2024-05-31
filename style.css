@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -10,15 +11,17 @@ body {
 
 .nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, gray, darkgray);
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add this line */
 }
 
 .nav .profile {
-    margin-right: 20px;
+    display: flex;
+    align-items: center; /* Add this line */
 }
 
 .nav .profile img {
@@ -27,20 +30,18 @@ body {
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s;
-    margin-left: 450px;
 }
 
 .nav .profile img:hover {
     transform: scale(1.1);
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, gray, darkgray);
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.nav .navtext {
+    color: white;
+    font-size: 24px;
+    position: absolute; /* Add this line */
+    left: 50%; /* Add this line */
+    transform: translateX(-50%); /* Add this line */
 }
 
 .user-info {
@@ -53,20 +54,12 @@ body {
     margin-bottom: 5px;
 }
 
-.profile img {
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.profile img:hover {
-    transform: scale(1.1);
-}
-
 .signOut {
-    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -65px;
+    margin-bottom: 80px;
+    margin-right: 20px;
     top: 45px;
     right: 20px;
 }
@@ -107,6 +100,9 @@ a:hover::before {
 .navtext {
     color: white;
     font-size: 24px;
+    position: absolute; /* Add this line */
+    left: 50%; /* Add this line */
+    transform: translateX(-50%); /* Add this line */
 }
 
 .container {
@@ -197,23 +193,19 @@ hr {
 }
 
 @media(max-width: 750px){
-  nav .profile img{
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 735px ){
-  .input-grid, .todo-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .list{
-    display: none;
-  }
-}
-
-@media (max-width: 705px){
-  .todo-grid{
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    .signOut {
+        margin-top: -60px;
+    }    
+    .user-info {
+        margin-top: 10px;
+    }
+    .profile img {
+        margin-right: -560px;
+    }
+    .navtext {
+        margin-left: 200px;
+    }
+    .profile .blockText{
+        margin-right: 630px;
     }
 }
