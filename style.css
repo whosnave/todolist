@@ -196,57 +196,24 @@ hr {
     background-color: rgb(91, 151, 219);
 }
 
-@media only screen and (max-width: 500px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
+@media(max-width: 750px){
+  nav .profile img{
+    display: none;
+  }
+}
 
-    .nav .profile img {
-        margin: 10px 0;
-    }
+@media only screen and (max-width: 735px ){
+  .input-grid, .todo-grid{
+    grid-template-columns: 1fr;
+  }
 
-    .user-info {
-        margin-bottom: 10px;
-    }
+  .list{
+    display: none;
+  }
+}
 
-    .navtext {
-        margin: 10px 0;
-    }
-
-    .signOut {
-        position: static;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    .container {
-        margin: 20px;
-        padding: 10px;
-    }
-
-    .Add, .inputadd, .toolscheckbox1 {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .toolscheckbox1 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .edit1, .delete1 {
-        width: 100%;
-        margin-left: 0;
-        margin-bottom: 5px;
-    }
-
-    .list1 {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .text1 h3, .text1 p {
-        margin: 5px 0;
+@media (max-width: 705px){
+  .todo-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
     }
 }
