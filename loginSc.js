@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       if (username === storedUsername && password === storedPassword) {
         alert("Login successful!");
-        window.location.href = "index.html"; // Ganti dengan halaman yang sesuai setelah login berhasil
+        window.location.href = "homepage.html"; // Ganti dengan halaman yang sesuai setelah login berhasil
       } else {
         const signUp = confirm("Login failed. Click OK if you want to create a new account.");
   
