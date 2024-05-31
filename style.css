@@ -203,7 +203,8 @@ hr {
     }
 
     .nav .profile img {
-        margin-left: 0;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 10px;
     }
 
@@ -220,12 +221,13 @@ hr {
     }
 
     .navtext {
-        margin-right: 0;
+        margin-right: auto;
+        margin-left: auto;
         margin-top: 10px;
     }
 
     .container {
-        margin: 20px 10px;
+        margin: 20px;
         padding: 10px;
     }
 
