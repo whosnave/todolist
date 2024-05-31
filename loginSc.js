@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const signUp = confirm("Login failed. Click OK if you want to create a new account.");
   
         if (signUp == true) {
-          window.location.href = "register.html";
+          window.location.href = "index.html";
         }
       }
     });
